@@ -11,7 +11,7 @@ public class Word2Pattern {
                     System.out.print("  ");
                 }
             } else if (a == 'B') {
-                if (row == 0 || (j == 0 && j != n - 1) || (row == n / 2 && j != n / 2) || (j == n - 1 && j != n / 2) || (j == n - 1 && row != 0 && row != n / 2 && row != n - 1)) {
+            	if (j == 0 || (row == 0 && j < n - 1) || (row == n / 2 && j < n - 1) || (row == n - 1 && j < n - 1) || (j == n - 1 && (row > 0 && row < n / 2 || row > n / 2 && row < n - 1))) {
                     System.out.print("* ");
                 } else {
                     System.out.print("  ");
@@ -131,7 +131,7 @@ public class Word2Pattern {
                     System.out.print("  ");
                 }
             } else if (a == 'V') {
-                if ((j == 0 && row < n - 1) || (j == n - 1 && row < n - 1) || (row == n - 1 && j > 0 && j < n - 1) || (row == j && row >= n / 2) || (row + j == n - 1 && row >= n / 2)) {
+            	 if ((j == 0 && row < n / 2 + 1) || (j == n - 1 && row < n / 2 + 1) || (row-j==n-4 && row >n / 2) || (j+row==n+2 && row > n / 2)) {
                     System.out.print("* ");
                 } else {
                     System.out.print("  ");
